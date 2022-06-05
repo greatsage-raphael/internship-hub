@@ -26,16 +26,33 @@ function App() {
     <>
       <Navbar />
       <Loader loaderRef={loaderRef} />
-      <div>
+      <section className="internships-section">
         {internshipData.map((internship, index) => (
-          <div key={index}>
-            <a href={internship.link}>{internship.title}</a>
-            <p>{internship.company}</p>
-            <p>{internship.location}</p>
-            <img src={internship.logo} alt={internship.company + " logo"} />
-          </div>
+          <>
+            <div key={index} className="internship">
+              <img
+                src={internship.logo}
+                alt={internship.company + " logo"}
+                className="logo"
+              />
+              <div className="internship-detail">
+                <a
+                  href={internship.link}
+                  className="title"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {internship.title}
+                </a>
+                <p className="company">{internship.company}</p>
+                <p className="location">{internship.location}</p>
+                <small>{internship.datePosted}</small>
+              </div>
+            </div>
+            <hr />
+          </>
         ))}
-      </div>
+      </section>
     </>
   );
 }

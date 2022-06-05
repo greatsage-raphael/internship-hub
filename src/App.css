@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+}
+
+small {
+  font-style: italic;
+}
+
 .navbar {
   height: 50px;
   background-color: rgba(102, 16, 83, 0.6983);
@@ -7,8 +18,8 @@
   justify-content: space-around;
 }
 
-.logo {
-  font-style: 20px;
+.app-name {
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -185,4 +196,49 @@ input {
     stroke-dasharray: 40 242.6;
     stroke-dashoffset: 282.6;
   }
+}
+
+/* Internships section */
+
+.internships-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  max-width: 768px;
+  margin-top: 2rem;
+}
+
+.internship {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: hidden;
+  max-height: 200px;
+  max-width: 350px;
+  flex: 1 1 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.internship-detail {
+  width: 70%;
+  margin-left: 10px;
+}
+
+.internship .logo {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+.internship .title {
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+  width: 100%;
+  border-color: rgb(255 255 255);
 }
