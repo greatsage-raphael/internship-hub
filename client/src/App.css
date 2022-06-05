@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+aside {
+  margin-top: 2rem;
+  position: sticky;
+  height: 100vh;
+  top: 80px;
+  margin-right: 20px;
+}
+
+aside ul {
+  margin-top: 20px;
+  overflow-y: scroll;
+  padding: 0;
+  line-height: 1.5;
+}
+
+small {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  height: 50px;
+  background-color: rgba(102, 16, 83, 1);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.app-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.listItem {
+  margin-right: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 60%;
+  height: 75%;
+  -webkit-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+  box-shadow: 0px 5px 33px -21px rgba(66, 68, 90, 1);
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.left,
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.or {
+  border: 2px solid lightgray;
+  border-radius: 50%;
+  padding: 10px;
+  color: gray;
+  background-color: white;
+  font-weight: bold;
+}
+
+.line {
+  width: 0.5px;
+  height: 70%;
+  background-color: lightgray;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+}
+
+.loginButton {
+  width: 150px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.google {
+  background-color: #df4930;
+}
+
+.github {
+  background-color: black;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+input {
+  width: 200px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.submit {
+  width: 200px;
+  background-color: rgba(128, 0, 128, 0.671);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+.loginTitle {
+  position: absolute;
+  top: 150px;
+  color: lightgray;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Loader SVG */
+
+.svg-loader {
+  display: none;
+  position: relative;
+  align-content: space-around;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.loader-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke: rgb(149 89 136);
+}
+
+.loader-svg.bg {
+  stroke-width: 8px;
+  stroke: rgb(207, 205, 245);
+}
+
+.animate {
+  stroke-dasharray: 242.6;
+  animation: fill-animation 1s cubic-bezier(1, 1, 1, 1) 0s infinite;
+}
+
+@keyframes fill-animation {
+  0% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 141.3;
+    stroke-dashoffset: 141.3;
+  }
+  100% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 282.6;
+  }
+}
+
+/* Internships section */
+
+.internships-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 650px;
+  margin-top: 2rem;
+}
+
+.internship {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: hidden;
+  max-height: 200px;
+  max-width: 350px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.internship-detail {
+  width: 100%;
+  margin-left: 10px;
+}
+
+.internship .logo {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+.internship .title {
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+  width: 100%;
+  border-color: rgb(255 255 255 / 38%);
+}
+
+@media (max-width: 750px) {
+  main {
+    display: block;
+  }
+
+  aside {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 534px) {
+  .app-name {
+    font-size: 1rem;
+    margin: 10px;
+  }
+}
+
+/* Career Advice List */
+
+.career-advice-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.career-advice-item img {
+  object-fit: cover;
+  max-width: 70px;
+  max-height: 70px;
+}
