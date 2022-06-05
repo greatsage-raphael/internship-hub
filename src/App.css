@@ -5,13 +5,35 @@ body {
   margin: 0 auto;
 }
 
+main {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+aside {
+  margin-top: 2rem;
+  position: sticky;
+  height: 100vh;
+  top: 80px;
+}
+
+aside ul {
+  margin-top: 20px;
+  padding: 0;
+  line-height: 1.5;
+}
+
 small {
   font-style: italic;
 }
 
 .navbar {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
   height: 50px;
-  background-color: rgba(102, 16, 83, 0.6983);
+  background-color: rgba(102, 16, 83, 1);
   color: white;
   display: flex;
   align-items: center;
@@ -158,7 +180,7 @@ input {
   position: relative;
   align-content: space-around;
   justify-content: center;
-  margin-top: 30px;
+  margin: 0 auto;
 }
 
 .loader-svg {
@@ -207,7 +229,7 @@ input {
   align-items: start;
   gap: 20px;
   width: 100%;
-  max-width: 768px;
+  max-width: 650px;
   margin-top: 2rem;
 }
 
@@ -218,13 +240,12 @@ input {
   overflow: hidden;
   max-height: 200px;
   max-width: 350px;
-  flex: 1 1 50%;
   margin-left: 20px;
   margin-right: 20px;
 }
 
 .internship-detail {
-  width: 70%;
+  width: 100%;
   margin-left: 10px;
 }
 
@@ -240,5 +261,22 @@ input {
 
 hr {
   width: 100%;
-  border-color: rgb(255 255 255);
+  border-color: rgb(255 255 255 / 38%);
+}
+
+@media (max-width: 750px) {
+  main {
+    display: block;
+  }
+
+  aside {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 534px) {
+  .app-name {
+    font-size: 1rem;
+    margin: 10px;
+  }
 }
