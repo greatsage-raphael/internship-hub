@@ -16,16 +16,22 @@ aside {
   position: sticky;
   height: 100vh;
   top: 80px;
+  margin-right: 20px;
 }
 
 aside ul {
   margin-top: 20px;
+  overflow-y: scroll;
   padding: 0;
   line-height: 1.5;
 }
 
 small {
   font-style: italic;
+}
+
+a {
+  text-decoration: none;
 }
 
 .navbar {
@@ -279,4 +285,19 @@ hr {
     font-size: 1rem;
     margin: 10px;
   }
+}
+
+/* Career Advice List */
+
+.career-advice-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.career-advice-item img {
+  object-fit: cover;
+  max-width: 70px;
+  max-height: 70px;
 }
