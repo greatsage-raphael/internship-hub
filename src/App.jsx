@@ -1,56 +1,36 @@
-import {useState, useEffect} from "react"
-import axios from "axios"
-import './App.css';
-import Navbar from './components/Navbar';
-
-
-const fetchInternships = () => {
-return axios.get("https://internships-web-scraper.herokuapp.com/results")
-.then(({data}) => {
-  //handle success
-  console.log(data);
-  return data;
-})
-.catch(err => {
-  console.log(err);
-});
-}
-
-// const getInternshipName = (internshipInfo) => {
-
-//   const {title, company, location, link, logo } = internshipInfo
-
-// }
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [internshipData, setInternshipData] = useState("")
-  // const [internshipInfos, setInternshipInfo] = useState([])
+  const [internshipData, setInternshipData] = useState([]);
 
-
-  useEffect(()=>{
-  fetchInternships().then(returnedData => {
-    setInternshipData(JSON.stringify(returnedData, null, 2))
-    // setInternshipInfo(returnedData.results)
-  })
-  }, [])
+  useEffect(() => {
+    fetch("https://internships-web-scraper.herokuapp.com/results")
+      .then((response) => {
+        console.log(response);
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        setInternshipData(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
-    
     <>
-    <Navbar/>
-
-    {/* {
-     internshipInfos.map((internshipInfo, idx) =>{
-       <pre>
-         {getInternshipName(internshipInfo)}
-       </pre>
-     })
-    } */}
-      <pre>
-        {internshipData}
-      </pre>
-
-
+      <Navbar />
+      <div>
+        {internshipData.map((internship, index) => (
+          <div key={index}>
+            <a href={internship.link}>{internship.title}</a>
+            <p>{internship.company}</p>
+            <p>{internship.location}</p>
+            <img src={internship.logo} alt={internship.company + " logo"} />
+          </div>
+        ))}
+      </div>
     </>
   );
 }
