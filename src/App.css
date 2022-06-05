@@ -1,32 +1,63 @@
-.navbar{
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+aside {
+  margin-top: 2rem;
+  position: sticky;
+  height: 100vh;
+  top: 80px;
+}
+
+aside ul {
+  margin-top: 20px;
+  padding: 0;
+  line-height: 1.5;
+}
+
+small {
+  font-style: italic;
+}
+
+.navbar {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
   height: 50px;
-  background-color: rgba(102,16,83, 0.6983);
+  background-color: rgba(102, 16, 83, 1);
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.logo{
-  font-style: 20px;
+.app-name {
+  font-size: 1.5rem;
   font-weight: bold;
-  
-
 }
 
-.list{
+.list {
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-.listItem{
+.listItem {
   margin-right: 20px;
   font-weight: 500;
-  cursor: pointer
+  cursor: pointer;
 }
 
-.avatar{
+.avatar {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -51,15 +82,15 @@
   border-radius: 20px;
 }
 
-
-.left,.right{
+.left,
+.right {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.center{
+.center {
   height: 100%;
   display: flex;
   align-items: center;
@@ -67,7 +98,7 @@
   position: relative;
 }
 
-.or{
+.or {
   border: 2px solid lightgray;
   border-radius: 50%;
   padding: 10px;
@@ -76,7 +107,7 @@
   font-weight: bold;
 }
 
-.line{
+.line {
   width: 0.5px;
   height: 70%;
   background-color: lightgray;
@@ -89,7 +120,7 @@
   z-index: -1;
 }
 
-.loginButton{
+.loginButton {
   width: 150px;
   padding: 15px 25px;
   border-radius: 5px;
@@ -101,27 +132,27 @@
   cursor: pointer;
 }
 
-.google{
+.google {
   background-color: #df4930;
 }
 
-.github{
+.github {
   background-color: black;
 }
 
-.icon{
+.icon {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-input{
+input {
   width: 200px;
   padding: 15px 20px;
   margin-bottom: 20px;
 }
 
-.submit{
+.submit {
   width: 200px;
   background-color: rgba(128, 0, 128, 0.671);
   color: white;
@@ -131,13 +162,121 @@ input{
   border-radius: 5px;
 }
 
-.loginTitle{
+.loginTitle {
   position: absolute;
   top: 150px;
-  color:lightgray
+  color: lightgray;
 }
 
-.link{
+.link {
   color: inherit;
   text-decoration: none;
+}
+
+/* Loader SVG */
+
+.svg-loader {
+  display: none;
+  position: relative;
+  align-content: space-around;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.loader-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke: rgb(149 89 136);
+}
+
+.loader-svg.bg {
+  stroke-width: 8px;
+  stroke: rgb(207, 205, 245);
+}
+
+.animate {
+  stroke-dasharray: 242.6;
+  animation: fill-animation 1s cubic-bezier(1, 1, 1, 1) 0s infinite;
+}
+
+@keyframes fill-animation {
+  0% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 141.3;
+    stroke-dashoffset: 141.3;
+  }
+  100% {
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 282.6;
+  }
+}
+
+/* Internships section */
+
+.internships-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  width: 100%;
+  max-width: 650px;
+  margin-top: 2rem;
+}
+
+.internship {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: hidden;
+  max-height: 200px;
+  max-width: 350px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.internship-detail {
+  width: 100%;
+  margin-left: 10px;
+}
+
+.internship .logo {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+
+.internship .title {
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+  width: 100%;
+  border-color: rgb(255 255 255 / 38%);
+}
+
+@media (max-width: 750px) {
+  main {
+    display: block;
+  }
+
+  aside {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 534px) {
+  .app-name {
+    font-size: 1rem;
+    margin: 10px;
+  }
 }
