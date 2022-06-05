@@ -39,7 +39,9 @@ const CareerAdvice = () => {
         {careerAdvice.map((resource, index) => (
           <li key={resource.id} className="career-advice-item">
             <img src={resource.image.url} alt={resource.title} />
-            <a href={resource.url}>{resource.title}</a>
+            <a href={resource.url} target="_blank" rel="noreferrer">
+              {resource.title}
+            </a>
           </li>
         ))}
       </ul>
