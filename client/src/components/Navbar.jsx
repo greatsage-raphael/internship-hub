@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 /* eslint-disable react/prop-types */
 const Navbar = ({ user }) => {
   const logout = () => {
-    window.open("http://localhost:5000/auth/logout", "_self");
+    window.open("https://internship-hub-backend.herokuapp.com/auth/logout", "_self"); 
   };
   return (
     <div className="navbar">
