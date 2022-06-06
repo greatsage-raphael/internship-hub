@@ -6,7 +6,8 @@ Users can search for internships in their selected fields and find resources tha
 
 The API we used in developing this app is a [LinkedIn Web Scraper](https://github.com/TildaDares/internships-web-scraper) we built as a part of MLH Orientation Hackathon.
 
-<img width="1280" alt="Internship Hub" src="https://user-images.githubusercontent.com/63427719/172181492-c43daa8e-434d-4c7f-91bf-0f0d2f6d27ee.png%22%3E
+<img width="1280" alt="Internship Hub" src="https://user-images.githubusercontent.com/63427719/172181492-c43daa8e-434d-4c7f-91bf-0f0d2f6d27ee.png" />
+
 
 ## Development
 
