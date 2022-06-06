@@ -1,22 +1,25 @@
 import React from "react";
 import Loader from "./Loader";
 import CareerAdvice from "./CareerAdvice";
-// import SearchForm from "./SearchForm";
+import SearchForm from "./SearchForm";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Home = () => {
   const [internshipData, setInternshipData] = useState([]);
-  // const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  // const handleSearchTextChange = (text) => {
-  //   setSearchText(text);
-  // };
+  const handleSearchTextChange = (text) => {
+    setSearchText(text);
+  };
 
   useEffect(() => {
+    setIsLoading(true);
     axios
-      .get(`https://internships-web-scraper.herokuapp.com/results/`)
+      .get(
+        `https://internships-web-scraper.herokuapp.com/results/${searchText}`
+      )
       .then((response) => {
         return response.data;
       })
@@ -25,7 +28,7 @@ const Home = () => {
         setIsLoading(false);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [searchText]);
 
   return (
     <main>
@@ -33,7 +36,7 @@ const Home = () => {
         {isLoading && <Loader />}
         {!isLoading && (
           <>
-            {/* <SearchForm handleSearchTextChange={handleSearchTextChange} /> */}
+            <SearchForm handleSearchTextChange={handleSearchTextChange} />
             {internshipData.map((internship, index) => (
               <div key={index}>
                 <div className="internship">

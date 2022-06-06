@@ -299,7 +299,7 @@ hr {
 
 /* Search Form */
 
-/* .search-form {
+.search-form {
   margin: 0 auto;
   background: #fff;
   margin: auto;
@@ -345,11 +345,11 @@ hr {
 }
 
 form.search-form button:hover {
-  background: #0b7dda;
+  background: rgb(149 89 136);
 }
 
 form.search-form::after {
   content: "";
   clear: both;
   display: table;
-} */
+}
