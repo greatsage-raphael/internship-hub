@@ -7,10 +7,14 @@ const authRoute = require("./routes/auth");
 const app = express();
 
 app.use(session({
-   secret: 'somethingsecretgoeshere',
-   resave: false,
-   saveUninitialized: true,
-   cookie: { secure: true }
+  secret: 'mlh',
+  name:'uniqueSessionID',
+  resave: true,
+  saveUninitialized: true,
+  cookie: { 
+     maxAge: 360000,
+      secure: false
+   }
 }));
 
 app.use(passport.initialize());

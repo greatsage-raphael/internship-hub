@@ -19,7 +19,7 @@ const Navbar = ({ user }) => {
           <li className="listItem">
             <img
               src={user.photos[0].value}
-              alt=""
+              alt="avatar"
               className="avatar"
             />
           </li>

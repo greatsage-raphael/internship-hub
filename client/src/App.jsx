@@ -21,6 +21,7 @@ function App() {
         },
       })
         .then((response) => {
+          console.log(response)
           if (response.status === 200) return response.json();
           throw new Error("authentication has been failed!");
         })
@@ -48,6 +49,7 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+    {console.log(user)}
     </>
   
   
