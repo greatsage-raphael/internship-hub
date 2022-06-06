@@ -29,3 +29,5 @@ To run the backend for authentication, do the following:
 - Run cd backend to navigate into the backend folder
 - Start the server by running npm run start.
 - You should be able to log in with your Google and Github accounts now! (edited)
+
+We have a separate backend that we created for deployment [here](https://github.com/TildaDares/internship-hub-backend).
