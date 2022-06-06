@@ -5,9 +5,23 @@ import  { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
 const Home = () => {
-    const [internshipData, setInternshipData] = useState([]);
+    const [internshipData, setInternshipData] = useState([]);const [query, setQuery] = useState("");
   const loaderRef = useRef();
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(query)
+    axios
+    .get(`https://internships-web-scraper.herokuapp.com/results/:${query}`)
+    .then((response) => {
+      return response.data;
+    })
+    .then((data) => {
+      setInternshipData(data);
+      loaderRef.current.style.display = "none";
+    })
+    .catch((err) => console.log(err));
+  }
   useEffect(() => {
     loaderRef.current.style.display = "flex";
     axios
@@ -24,6 +38,21 @@ const Home = () => {
 
   return (
     <main>
+         <div>
+            {/* Search Bar form */}
+          <form onSubmit={(e) => handleSubmit(e)}>
+          <input
+            id="searchInput"
+            className="focus:outline-none"
+            type="text"
+            placeholder="Search"
+            value={query}
+            onChange={(event) => {
+              setQuery(event.target.value);
+            }}
+          />
+      </form>
+      </div>
         <section className="internships-section">
           <Loader loaderRef={loaderRef} />
           {internshipData.map((internship, index) => (
