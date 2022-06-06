@@ -8,7 +8,6 @@ The API we used in developing this app is a [LinkedIn Web Scraper](https://githu
 
 <img width="1280" alt="Internship Hub" src="https://user-images.githubusercontent.com/63427719/172181492-c43daa8e-434d-4c7f-91bf-0f0d2f6d27ee.png" />
 
-
 ## Development
 
 To run this project on your local machine, do the following:
