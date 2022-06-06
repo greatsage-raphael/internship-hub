@@ -25,7 +25,7 @@ app.use(passport.session());
 
 app.use(
   cors({
-    origin: "https://internshiphub.vercel.app",
+    origin: "https://internship-hub.vercel.app/",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
