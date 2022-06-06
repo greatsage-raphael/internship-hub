@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const passport = require("passport");
 
-const CLIENT_URL = "http://internshiphub.vercel.app";
+const CLIENT_URL = "https://internship-hub.vercel.app/";
 
 router.get("/login/success", (req, res) => {
   if (req.user) {
