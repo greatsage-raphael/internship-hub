@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const getUser = () => {
-      fetch("http://localhost:5000/auth/login/success", {
+      fetch("https://internship-hub-backend.herokuapp.com/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
