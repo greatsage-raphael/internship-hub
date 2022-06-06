@@ -10,7 +10,7 @@ const Navbar = ({ user }) => {
     <div className="navbar">
       <span className="logo app-name">
         <Link className="link" to="/">
-          Internships Hub
+          Internship Hub
         </Link>
       </span>
       {user ? (
