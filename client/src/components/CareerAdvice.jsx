@@ -15,7 +15,7 @@ const CareerAdvice = () => {
     },
     headers: {
       "X-RapidAPI-Host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
-      "X-RapidAPI-Key": "f4b65f8b71mshd94f1c8f39c24c8p1db2e3jsn34588fe4b357",
+      "X-RapidAPI-Key": "f54baca758msh9f2a96bb2820404p158fd6jsn90e4dae3e6ff",
     },
   };
 
