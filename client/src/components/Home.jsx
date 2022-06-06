@@ -10,7 +10,6 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(query)
     axios
     .get(`https://internships-web-scraper.herokuapp.com/results/:${query}`)
     .then((response) => {
