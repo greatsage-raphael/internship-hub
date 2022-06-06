@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-const Loader = (props) => {
+const Loader = () => {
   return (
-    <div className="svg-loader" ref={props.loaderRef}>
+    <div className="svg-loader">
       <svg
         className="svg-container"
         height="100"

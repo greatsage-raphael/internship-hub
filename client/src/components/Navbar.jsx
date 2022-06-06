@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
-  /* eslint-disable react/prop-types */
+/* eslint-disable react/prop-types */
 const Navbar = ({ user }) => {
   const logout = () => {
     window.open("http://localhost:5000/auth/logout", "_self");
   };
-  return ( 
+  return (
     <div className="navbar">
-      <span className="logo">
+      <span className="logo app-name">
         <Link className="link" to="/">
           Internships Finder
         </Link>
@@ -17,11 +16,7 @@ const Navbar = ({ user }) => {
       {user ? (
         <ul className="list">
           <li className="listItem">
-            <img
-              src={user.photos[0].value}
-              alt="avatar"
-              className="avatar"
-            />
+            <img src={user.photos[0].value} alt="avatar" className="avatar" />
           </li>
           <li className="listItem">{user.displayName}</li>
           <li className="listItem" onClick={logout}>
