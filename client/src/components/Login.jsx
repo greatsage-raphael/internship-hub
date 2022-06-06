@@ -4,11 +4,11 @@ import React from "react";
 
 const Login = () => {
   const google = () => {
-    window.open("http://localhost:5000/auth/google", "_self");
+    window.open("https://internship-hub-backend.herokuapp.com/auth/google", "_self");
   };
 
   const github = () => {
-    window.open("http://localhost:5000/auth/github", "_self");
+    window.open("https://internship-hub-backend.herokuapp.com/auth/github", "_self");
   };
 
   return (
