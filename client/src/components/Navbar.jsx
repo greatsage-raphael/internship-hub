@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 
   /* eslint-disable react/prop-types */
@@ -33,6 +34,7 @@ const Navbar = ({ user }) => {
           Login
         </Link>
       )}
+      <SearchBar />
     </div>
   );
 };
