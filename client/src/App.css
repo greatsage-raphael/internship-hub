@@ -177,7 +177,7 @@ input {
 /* Loader SVG */
 
 .svg-loader {
-  display: none;
+  display: flex;
   position: relative;
   align-content: space-around;
   justify-content: center;
@@ -296,3 +296,60 @@ hr {
   max-width: 70px;
   max-height: 70px;
 }
+
+/* Search Form */
+
+/* .search-form {
+  margin: 0 auto;
+  background: #fff;
+  margin: auto;
+  max-width: 300px;
+  height: 41px;
+  display: flex;
+}
+
+.search-form input {
+  outline-color: rgb(149 89 136);
+  padding: 10px;
+  font-size: 17px;
+  float: left;
+  width: 80%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid rgb(206 193 193);
+  border-right: none;
+  margin-bottom: 0;
+}
+
+.search-form button {
+  background: inherit;
+  float: left;
+  width: 20%;
+  padding: 10px;
+  color: white;
+  font-size: 17px;
+  border: 1px solid rgb(206 193 193);
+  border-left: none;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.icons8-search {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6I3VuZGVmaW5lZDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzY2MTA1MyI+PHBhdGggZD0iTTk0LjkyLDEzLjU2Yy00Mi4zOTI2NiwwIC03Ni44NCwzNC40NDczNCAtNzYuODQsNzYuODRjMCw0Mi4zOTI2NiAzNC40NDczNCw3Ni44NCA3Ni44NCw3Ni44NGMxNi43NzM0NCwwIDMyLjI3NTYzLC01LjQwMjgxIDQ0LjkxNzUsLTE0LjU0ODc1bDU5LjQ2NjI1LDU5LjMyNWwxMi43MTI1LC0xMi43MTI1bC01OC43NiwtNTguOTAxMjVjMTEuNTQ3MTksLTEzLjQ1NDA2IDE4LjUwMzc1LC0zMC45MTYwOSAxOC41MDM3NSwtNTAuMDAyNWMwLC00Mi4zOTI2NiAtMzQuNDQ3MzQsLTc2Ljg0IC03Ni44NCwtNzYuODR6TTk0LjkyLDIyLjZjMzcuNTAxODgsMCA2Ny44LDMwLjI5ODEyIDY3LjgsNjcuOGMwLDM3LjUwMTg4IC0zMC4yOTgxMiw2Ny44IC02Ny44LDY3LjhjLTM3LjUwMTg3LDAgLTY3LjgsLTMwLjI5ODEyIC02Ny44LC02Ny44YzAsLTM3LjUwMTg3IDMwLjI5ODEzLC02Ny44IDY3LjgsLTY3Ljh6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=")
+    50% 50% no-repeat;
+  background-size: 100%;
+}
+
+form.search-form button:hover {
+  background: #0b7dda;
+}
+
+form.search-form::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
